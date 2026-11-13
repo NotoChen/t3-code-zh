@@ -1,5 +1,7 @@
 # T3 Code 简体中文汉化
 
+GitHub：[NotoChen/t3-code-zh](https://github.com/NotoChen/t3-code-zh) · [下载 Release](https://github.com/NotoChen/t3-code-zh/releases)
+
 针对 **T3 Code Web UI** 的本地 Chrome / Edge 扩展。不是 T3 Code 官方项目。
 
 ## 特点
