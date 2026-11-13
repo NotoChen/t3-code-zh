@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.1
+
+- Add 16/32/48/128 extension icons and toolbar action metadata.
+- Add `homepage_url`, `author`, `short_name`, and minimum Chrome version to the manifest.
+- Add privacy policy, contributing guide, security policy, validation tests, packaging script, and GitHub Actions CI.
+- Expand README with installation, compatibility, permissions, privacy, troubleshooting, acknowledgements, and license sections.
+
 ## 1.1.0
 
 - Add automatic T3 Code page detection; the extension no longer starts translating on unrelated localhost apps.
