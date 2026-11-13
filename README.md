@@ -214,6 +214,17 @@ GitHub Actions 会在 push / pull request 时自动执行校验和打包。
 这些内容不应该机械翻译。比如 `T3 Code`、模型名、`/Users/...`、`git clone`、`composerFocus` 等属于品牌、路径、命令或技术标识，保留原文更准确。
 </details>
 
+## 相关项目与差异
+
+T3 Code 的中文化并不是只有本项目。已知的社区方案包括：
+
+- [ZhiweiXiao98/t3code](https://github.com/ZhiweiXiao98/t3code)：源码级简体中文社区版，提供多端安装包
+- [EclipticAxis/t3code-zh-CN](https://github.com/EclipticAxis/t3code-zh-CN)：基于官方源码的简体中文特化版
+- [Codepql/t3code-zh-cn](https://github.com/Codepql/t3code-zh-cn)：汉化包 / 汉化脚本
+- [markshan00/t3code-zh](https://github.com/markshan00/t3code-zh)：词库、构建时转换插件和安装包
+
+本项目的差异是：**不修改 T3 Code 官方 client**，用 Chrome / Edge 扩展只处理 Web UI，并自动识别 T3 Code 页面和 Web 版本；适合使用浏览器版、又不想每次 T3 Code 更新后重新替换客户端的用户。
+
 ## 致谢
 
 - [pingdotgg/t3code](https://github.com/pingdotgg/t3code)：T3 Code 官方项目、英文 UI 与官方图标来源
