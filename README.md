@@ -1,4 +1,4 @@
-# T3 Code 简体中文汉化
+# T3 Code 中文界面（社区版）
 
 GitHub：[NotoChen/t3-code-zh](https://github.com/NotoChen/t3-code-zh) · [下载 Release](https://github.com/NotoChen/t3-code-zh/releases)
 

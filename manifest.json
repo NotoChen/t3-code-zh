@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "T3 Code 简体中文汉化",
+  "name": "T3 Code 中文界面（社区版）",
   "short_name": "T3 中文",
-  "version": "1.1.2",
-  "description": "T3 Code Web UI 全量简体中文汉化，自动识别 T3 Code 页面与 Web 版本。",
+  "version": "1.1.3",
+  "description": "为 T3 Code Web UI 提供简体中文界面，自动识别 T3 Code 页面与版本（非官方社区项目）。",
   "author": "NotoChen",
   "homepage_url": "https://github.com/NotoChen/t3-code-zh",
   "minimum_chrome_version": "102",
@@ -14,7 +14,7 @@
     "128": "icons/icon128.png"
   },
   "action": {
-    "default_title": "T3 Code 简体中文汉化",
+    "default_title": "T3 Code 中文界面（社区版）",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",

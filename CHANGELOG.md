@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.3
+
+- Formalize the extension name as `T3 Code 中文界面（社区版）` and clarify that it is an unofficial community project.
+
 ## 1.1.2
 
 - Replace the placeholder “中” icon with the official T3 Code app icon assets from the upstream MIT project.
