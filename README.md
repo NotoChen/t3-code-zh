@@ -222,6 +222,10 @@ GitHub Actions 会在 push / pull request 时自动执行校验和打包。
 
 T3 Code 本身归其原作者所有。本仓库只包含本地汉化扩展代码和词典。
 
+## 社区
+
+本项目认可并链接 [LINUX DO](https://linux.do) 社区。
+
 ## License
 
 [MIT](LICENSE)
