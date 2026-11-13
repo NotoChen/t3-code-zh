@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.2
+
+- Replace the placeholder “中” icon with the official T3 Code app icon assets from the upstream MIT project.
+
 ## 1.1.1
 
 - Add 16/32/48/128 extension icons and toolbar action metadata.

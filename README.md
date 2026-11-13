@@ -114,7 +114,7 @@ LICENSE             MIT
 
 ## 致谢
 
-- [pingdotgg/t3code](https://github.com/pingdotgg/t3code)：T3 Code 官方项目与英文 UI 来源
+- [pingdotgg/t3code](https://github.com/pingdotgg/t3code)：T3 Code 官方项目、英文 UI 与官方图标来源
 - [ZhiweiXiao98/t3code](https://github.com/ZhiweiXiao98/t3code)：社区简体中文词库与源码级 i18n 工作（MIT）
 - 所有参与补充词条、截图和测试的贡献者
 

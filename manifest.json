@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "T3 Code 简体中文汉化",
   "short_name": "T3 中文",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "T3 Code Web UI 全量简体中文汉化，自动识别 T3 Code 页面与 Web 版本。",
   "author": "NotoChen",
   "homepage_url": "https://github.com/NotoChen/t3-code-zh",
