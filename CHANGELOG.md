@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.0
+
+- Add optional site permission flow and popup for LAN / Tailscale T3 Code URLs; one-time authorization per host, then auto-inject.
+- Keep localhost and app.t3.codes as zero-setup supported origins.
+
 ## 1.1.3
 
 - Formalize the extension name as `T3 Code 中文界面（社区版）` and clarify that it is an unofficial community project.

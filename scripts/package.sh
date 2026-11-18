@@ -5,6 +5,6 @@ VERSION="$(node -p "require('./manifest.json').version")"
 rm -rf dist
 mkdir -p dist
 zip -r -X "dist/t3-code-zh-${VERSION}.zip" \
-  manifest.json content.js translations.js icons README.md LICENSE CHANGELOG.md PRIVACY.md CONTRIBUTING.md SECURITY.md docs \
+  manifest.json content.js popup.html popup.js translations.js icons README.md LICENSE CHANGELOG.md PRIVACY.md CONTRIBUTING.md SECURITY.md docs \
   -x '*.DS_Store'
 echo "built dist/t3-code-zh-${VERSION}.zip"

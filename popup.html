@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>T3 Code 中文界面</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { margin: 0; min-width: 300px; font: 14px -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", sans-serif; background: #f8fafc; color: #0f172a; }
+    main { padding: 18px; }
+    header { display: flex; gap: 11px; align-items: center; margin-bottom: 14px; }
+    img { width: 36px; height: 36px; border-radius: 9px; }
+    h1 { font-size: 15px; margin: 0; }
+    p { color: #64748b; line-height: 1.55; margin: 8px 0; }
+    #origin { word-break: break-all; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #334155; background: #eef2f7; border-radius: 7px; padding: 8px 9px; }
+    button { width: 100%; margin-top: 12px; border: 0; border-radius: 8px; padding: 10px 12px; background: #2563eb; color: white; font: inherit; font-weight: 600; cursor: pointer; }
+    button:disabled { opacity: .55; cursor: default; }
+    #status { min-height: 20px; margin-top: 10px; font-size: 12px; color: #64748b; line-height: 1.5; }
+    .hint { font-size: 12px; color: #94a3b8; margin-top: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <img src="icons/icon48.png" alt="">
+      <div><h1>T3 Code 中文界面</h1><div style="font-size:12px;color:#64748b">社区版 · 本地词典</div></div>
+    </header>
+    <p>当前页面：</p>
+    <div id="origin">读取中…</div>
+    <button id="enable" disabled>启用当前站点汉化</button>
+    <div id="status"></div>
+    <p class="hint">Chrome 的站点权限必须由你主动授权。授权一次后，同一站点的 T3 Code 页面会自动检测并汉化。</p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

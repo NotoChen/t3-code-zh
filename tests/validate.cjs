@@ -13,11 +13,12 @@ for (const size of ["16", "32", "48", "128"]) {
   const icon = manifest.icons && manifest.icons[size];
   if (!icon || !fs.existsSync(path.join(root, icon))) errors.push(`missing icon ${size}`);
 }
-for (const script of ["translations.js", "content.js"]) {
+for (const script of ["translations.js", "content.js", "popup.html", "popup.js"]) {
   if (!fs.existsSync(path.join(root, script))) errors.push(`missing ${script}`);
 }
 if (!manifest.content_scripts || !manifest.content_scripts.length) errors.push("no content_scripts");
 if (!manifest.homepage_url) errors.push("missing homepage_url");
+if (!manifest.action || !manifest.action.default_popup) errors.push("missing action popup");
 
 const content = fs.readFileSync(path.join(root, "content.js"), "utf8");
 if (!content.includes("isT3CodePage")) errors.push("content.js missing T3 page detection");
