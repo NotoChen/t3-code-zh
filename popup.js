@@ -1,8 +1,11 @@
 const originEl = document.getElementById("origin");
 const enableEl = document.getElementById("enable");
+const enableAllEl = document.getElementById("enable-all");
 const statusEl = document.getElementById("status");
 let currentTab = null;
 let originPattern = null;
+const ALL_ORIGINS = ["http://*/*", "https://*/*"];
+const ALL_SCRIPT_ID = "t3zh-all-sites";
 
 function setStatus(text, isError = false) {
   statusEl.textContent = text;
@@ -36,7 +39,9 @@ async function refresh() {
   const granted = await chrome.permissions.contains({ origins: [pattern] });
   enableEl.disabled = false;
   enableEl.textContent = granted ? "重新应用汉化" : "启用当前站点汉化";
-  setStatus(granted ? "此站点已授权，点击可重新应用。" : "首次使用需要授权此站点。");
+  const allGranted = await chrome.permissions.contains({ origins: ALL_ORIGINS });
+  enableAllEl.textContent = allGranted ? "重新应用所有站点" : "启用所有站点（自动识别 T3 Code）";
+  setStatus(granted || allGranted ? "已授权，可将 T3 Code 页面加入翻译范围。" : "首次使用需要授权当前站点，或启用所有站点。");
 }
 
 enableEl.addEventListener("click", async () => {
@@ -71,6 +76,39 @@ enableEl.addEventListener("click", async () => {
     setStatus(`启用失败：${error.message || error}`, true);
   } finally {
     enableEl.disabled = false;
+  }
+});
+
+enableAllEl.addEventListener("click", async () => {
+  if (!currentTab) return;
+  enableAllEl.disabled = true;
+  try {
+    const granted = await chrome.permissions.request({ origins: ALL_ORIGINS });
+    if (!granted) {
+      setStatus("未获得所有站点权限。", true);
+      return;
+    }
+    const existing = await chrome.scripting.getRegisteredContentScripts({ ids: [ALL_SCRIPT_ID] });
+    if (existing.length) {
+      await chrome.scripting.unregisterContentScripts({ ids: [ALL_SCRIPT_ID] });
+    }
+    await chrome.scripting.registerContentScripts([{
+      id: ALL_SCRIPT_ID,
+      matches: ALL_ORIGINS,
+      js: ["translations.js", "content.js"],
+      runAt: "document_start",
+      allFrames: false,
+    }]);
+    await chrome.scripting.executeScript({
+      target: { tabId: currentTab.id },
+      files: ["translations.js", "content.js"],
+    });
+    setStatus("已启用所有站点。只有 T3 Code 页面会实际翻译。");
+    enableAllEl.textContent = "重新应用所有站点";
+  } catch (error) {
+    setStatus(`启用失败：${error.message || error}`, true);
+  } finally {
+    enableAllEl.disabled = false;
   }
 });
 

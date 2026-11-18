@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.0
+
+- Add an optional "all HTTP(S) sites" permission mode for users with many LAN / Tailscale IPs; content script detection still limits translation to T3 Code pages.
+
 ## 1.2.0
 
 - Add optional site permission flow and popup for LAN / Tailscale T3 Code URLs; one-time authorization per host, then auto-inject.

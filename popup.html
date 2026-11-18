@@ -14,6 +14,8 @@
     p { color: #64748b; line-height: 1.55; margin: 8px 0; }
     #origin { word-break: break-all; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #334155; background: #eef2f7; border-radius: 7px; padding: 8px 9px; }
     button { width: 100%; margin-top: 12px; border: 0; border-radius: 8px; padding: 10px 12px; background: #2563eb; color: white; font: inherit; font-weight: 600; cursor: pointer; }
+    button.secondary { background: #e2e8f0; color: #334155; margin-top: 8px; }
+    .warning { font-size: 11px; color: #9a3412; line-height: 1.45; margin-top: 8px; }
     button:disabled { opacity: .55; cursor: default; }
     #status { min-height: 20px; margin-top: 10px; font-size: 12px; color: #64748b; line-height: 1.5; }
     .hint { font-size: 12px; color: #94a3b8; margin-top: 14px; }
@@ -28,7 +30,9 @@
     <p>当前页面：</p>
     <div id="origin">读取中…</div>
     <button id="enable" disabled>启用当前站点汉化</button>
+    <button id="enable-all" class="secondary">启用所有站点（自动识别 T3 Code）</button>
     <div id="status"></div>
+    <p class="warning">“所有站点”会请求读取所有 HTTP(S) 网站，仅用于检测并翻译 T3 Code 页面；普通网站不会被翻译。</p>
     <p class="hint">Chrome 的站点权限必须由你主动授权。授权一次后，同一站点的 T3 Code 页面会自动检测并汉化。</p>
   </main>
   <script src="popup.js"></script>
