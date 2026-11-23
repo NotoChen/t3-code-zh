@@ -7,6 +7,11 @@
 <p align="center">
   为 <b>T3 Code Web UI</b> 提供简体中文界面的 Chrome / Edge 扩展。<br/>
   自动识别 T3 Code 页面与 Web 版本，只翻译 T3 Code，不干扰 localhost 上的其他应用。
+
+> [!IMPORTANT]
+> **T3 Code v0.1.11+ 已内置 10 种语言，包含简体中文。**  
+> 如果你使用 v0.1.11 或更新版本，请优先使用官方语言设置：**Settings → General → Display → Language → 中文**。  
+> 本扩展主要面向 **T3 Code v0.1.9 及更早版本**，或无法升级到官方多语言版本的用户；官方新版本不需要安装本扩展。
 </p>
 
 <p align="center">
@@ -32,7 +37,7 @@
 |---|---|
 | 类型 | Chrome / Edge Manifest V3 扩展 |
 | 作用范围 | T3 Code Web UI |
-| 支持版本 | T3 Code Web `0.1.x` |
+| 支持版本 | T3 Code Web `0.1.x`（v0.1.11+ 官方已有内置中文） |
 | 翻译方式 | 本地词典 + DOM 文本替换，无外部请求 |
 | 页面检测 | 标题 / T3 Code 应用壳匹配后才启动 |
 | 版本检测 | 从 `assets/index-*.js` 读取，写入 `html[data-t3zh-version]` |

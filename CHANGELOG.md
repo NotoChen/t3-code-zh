@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.1
+
+- Document that T3 Code v0.1.11+ includes official multilingual UI, including Simplified Chinese; the extension is now mainly for v0.1.9 and older.
+
 ## 1.3.0
 
 - Add an optional "all HTTP(S) sites" permission mode for users with many LAN / Tailscale IPs; content script detection still limits translation to T3 Code pages.
