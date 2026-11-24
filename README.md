@@ -4,6 +4,11 @@
 
 <h1 align="center">T3 Code 中文界面（社区版）</h1>
 
+> [!WARNING]
+> **本仓库已归档（2026-11-24）。**  
+> T3 Code **v0.1.11+ 已内置简体中文**，请在官方设置中使用：**Settings → General → Display → Language → 中文**。  
+> 本仓库不再更新，保留给 T3 Code **v0.1.9 及更早版本**的用户参考和下载；官方新版本不需要安装本扩展。
+
 <p align="center">
   为 <b>T3 Code Web UI</b> 提供简体中文界面的 Chrome / Edge 扩展。<br/>
   自动识别 T3 Code 页面与 Web 版本，只翻译 T3 Code，不干扰 localhost 上的其他应用。
